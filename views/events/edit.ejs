@@ -1,0 +1,52 @@
+<% layout("/layouts/boilerplate") %>
+
+<div class="row mt-3">
+    <div class="col-8 offset-2">
+
+        <h3>Edit this Event <%=event._id%></h3>
+
+        <form method="post" action="/Events/<%=event._id%>?_method=PUT" novalidate class="needs-validation" enctype="multipart/form-data">
+
+            <div class="mb-3">
+                <label for="Event[title]" class="form-label">Title</label>
+                <input type="text" value="<%=event.title%>" name="Event[title]" required class="form-control">
+                <div class="valid-feedback">That's look good</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="Event[date]" class="form-label">Date</label>
+                <input type="text" value="<%=event.date%> " name="Event[date]" required class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label for="Event[coordinators]" class="form-label">Event Coordinators</label>
+                <input type="text" value="<%=event.coordinators%>" name="Event[coordinators]" required class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label for="Event[rules]" class="form-label">Rules</label>
+                <textarea rows="15"  type="text" name="Event[rules]" required class="form-control"><%=event.rules%></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label for="Event[winners]" class="form-label">Winners</label>
+                <input type="text" value="<%=event.winners%>" name="Event[winners]" required class="form-control">
+            </div>
+
+            <div class="mb-3">
+                Privous image<br>
+                <% for(let i=0;i<photos.length;++i){ %>
+                    <img src="<%= photos[i]%>" alt="event image">
+                <% } %>
+            </div>
+
+            <div class="mb-3">
+                <label for="photos" class="form-label">Select Event photos(.jpeg,.png,.jpg):</label>
+                <input type="file" id="photos" name="Event[photos]" multiple accept=".jpeg,.png,.jpg" class="form-control">
+            </div>
+
+            <button class="btn btn-primary">Edit</button>
+
+        </form>
+    </div>
+</div>

@@ -1,0 +1,94 @@
+body {
+    background-color: skyblue !important;
+}
+
+.navbar-nav {
+    font-size: 1.3rem;
+}
+
+.navbar {
+    background-color: #0060ff;
+    font-size: 1.3rem;
+    align-items: center;
+}
+
+/* footer */
+
+.f-info-socials,.f-info-brand {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-info-socials i {
+    margin-right: 1rem;
+    font-size: 1.4rem;
+}
+
+.f-info-socials i:hover{
+    color: black;
+}
+
+.f-info {
+    background-color: #ebebeb;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+    text-align: center;
+}
+
+.list-unstyled a{
+    text-decoration: none;
+    color: #222222;
+    font-size:larger;
+}
+
+.list-unstyled a:hover{
+    text-decoration: dashed;
+    color: #0060ff;
+}
+
+.footer_2 {
+    text-align: center;
+}
+
+/* cards */
+.event-card {
+    border: none !important;      
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.card-img-top {
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
+.card-body {
+    padding: 0;
+    text-align: center;
+}
+
+.card-body p{
+    font-weight: 400 !important;
+}
+
+.event-link {
+    text-decoration: none;
+}
+
+.card-img-overlay {
+    opacity: 0;
+}
+
+.card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: white;
+}
+
+.btns {
+    display: flex;
+}
+

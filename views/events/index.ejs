@@ -1,0 +1,27 @@
+<% layout("/layouts/boilerplate") %>
+  <% if(currUser && currUser.username==="csi_ksrm"){%>
+  <form method="get" action="/Events/new">
+      <button class="btn btn-primary mt-2">upload a new event</button>
+  </form>
+  <%}%>
+  <div class="container-fluild">
+    <div class="row row-cols-md-1 row-cols-lg-2">
+      <% for(event of allEvents){%>   
+          <a href="Events/<%=event._id%>" class="event-link">
+              <div class="card col-12 img-fluid event-card border border-dark border-2 rounded-3 " >
+                  <img src="<%=event.photos[0].url%>" class="card-img-top img-fluid" alt="event logo" style="height: 20rem">
+                  <div class="card-img-overlay">CSI_KSRM</div>
+                  <div class="card-body">
+                    <p class="card-text">
+                      <b><%=event.title%></b><br>
+                      <%=event.date%>
+                    </p>
+                  </div>
+                </div>    
+          </a>
+      <% } %>
+  </div>
+  </div>
+  
+
+<!--     <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1"> -->
